@@ -42,7 +42,7 @@ export default function App() {
   return (
     <div className="app-container">
       {/* Portal button */}
-      <a href="https://web-production-3d1cb.up.railway.app/expo" target="_blank" rel="noopener noreferrer"
+      <a href="https://company-dashboard.up.railway.app/expo" target="_blank" rel="noopener noreferrer"
         style={{ position: 'fixed', top: 12, right: 16, zIndex: 999, display: 'flex', alignItems: 'center', gap: 6,
           padding: '6px 14px', borderRadius: 8, background: 'rgba(249,115,22,0.15)', border: '1px solid rgba(249,115,22,0.3)',
           color: '#F97316', fontSize: '0.7rem', fontWeight: 600, textDecoration: 'none', backdropFilter: 'blur(8px)' }}>
