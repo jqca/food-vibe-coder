@@ -6,7 +6,7 @@ interface Props {
   onGenerate: (useCaseId: string) => void;
   onReset: () => void;
   isGenerating: boolean;
-  history: { role: 'user' | 'assistant'; text: string }[];
+  history: { role: 'user' | 'assistant'; content: string }[];
 }
 
 export default function AIChat({ onGenerate, onReset, isGenerating, history }: Props) {
@@ -47,7 +47,7 @@ export default function AIChat({ onGenerate, onReset, isGenerating, history }: P
                 border: `1px solid ${h.role === 'user' ? 'rgba(249,115,22,0.2)' : 'rgba(255,255,255,0.06)'}`,
                 color: 'var(--text-main)'
               }}>
-                {h.text}
+                {h.content}
               </div>
             </div>
           ))}
