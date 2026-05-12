@@ -37,9 +37,9 @@ const AIChat: React.FC<Props> = ({ onGenerate, onReset, isGenerating, history })
           </div>
         )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          {history.length === 0 && useCases.map((uc) => (
+          {history.length === 0 && useCases.map((uc, idx) => (
             <button key={uc.id} onClick={() => { handleUseCaseClick(uc.id, uc.prompt); fetch('/api/track', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ app_id: 'food', usecase_id: uc.id, usecase_title: uc.title }) }).catch(() => {}); }} disabled={isGenerating} style={{ textAlign: 'left', padding: '12px', background: selectedId === uc.id ? 'rgba(0, 225, 255, 0.15)' : 'rgba(255,255,255,0.05)', border: `1px solid ${selectedId === uc.id ? 'var(--quantum-blue)' : 'var(--border-color)'}`, borderRadius: '8px', color: 'var(--text-main)', cursor: isGenerating ? 'not-allowed' : 'pointer', transition: 'all 0.2s', opacity: isGenerating ? 0.5 : 1 }} className="use-case-btn">
-              <div style={{ fontWeight: 'bold', fontSize: '13px', color: selectedId === uc.id ? 'var(--quantum-green)' : '#eab308', marginBottom: '4px' }}>{uc.title}</div>
+              <div style={{ fontWeight: 'bold', fontSize: '13px', color: selectedId === uc.id ? 'var(--quantum-green)' : '#eab308', marginBottom: '4px' }}>{idx + 1}. {uc.title}</div>
               <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{uc.description}</div>
             </button>
           ))}
