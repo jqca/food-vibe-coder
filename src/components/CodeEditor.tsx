@@ -41,7 +41,7 @@ export default function CodeEditor({ code, isGenerating, onAnimationComplete }: 
           AIがコードを生成中...
         </div>
       ) : (
-        <pre style={{ margin: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+        <pre style={{ margin: 0, whiteSpace: 'pre-wrap', wordBreak: 'break-all', filter: 'blur(2.5px)' }}>
           <code>
             {displayCode.split('\n').map((line, idx) => {
               let color = 'var(--text-main)';
