@@ -4,7 +4,7 @@
   "version": "0.0.0",
     "scripts": {
     "dev": "vite",
-    "build:local": "tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "node server.cjs"
