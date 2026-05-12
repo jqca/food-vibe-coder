@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect } from 'react';
 import type { UseCase } from '../data/useCases';
 import { TrendingUp, TrendingDown, Truck, Zap, ShieldCheck, Target, Play, RotateCcw } from 'lucide-react';
 import VizCanvas, { getVizType } from './VizCanvas';
-import type { VizType } from './VizCanvas';
 
 const parseToSeconds = (timeStr: string): number | null => {
   if (!timeStr) return null;
